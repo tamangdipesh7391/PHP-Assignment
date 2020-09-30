@@ -8,24 +8,28 @@
 </head>
 <body>
 	<div class="container">
-		<form class="form-group col-md-4">
+		<form class="form-group col-md-4" onsubmit="return validation()">
 			<h2>Regex Validation</h2>
 			<div class="form-group">
 				<label>Username</label>
-			    <input type="text" id="name" onkeyup="checkName()" class="form-control">
+			    <input type="text" id="name"  class="form-control">
+			    <a style="color: red" id="nameError"></a>
 			</div>
 			<div class="form-group">
 				<label>Password</label>
-			    <input type="password" id="password" onkeyup="checkPass()" class="form-control">
+			    <input type="password" id="password"  class="form-control">
+			    <a style="color: red" id="passError"></a>
 			</div>
 			<div class="form-group">
 				<label>Email</label>	
-			    <input type="text" id="email" onkeyup="checkEmail()" class="form-control">
+			    <input type="text" id="email"  class="form-control">
+			    <a style="color: red" id="emailError"></a>
 			</div>
 			<div class="form-group">
 				<label>Message</label>
 			   <textarea rows="8" class="form-control" id="msg" onkeyup="checkMsg()"></textarea>
 			</div>
+			<button class="btn btn-info">Submit</button>
 		</form>
 	</div>
 	
